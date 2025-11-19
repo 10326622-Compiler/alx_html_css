@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALX Web Development Basics</title>
+</head>
+<body>
 
+    <header>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="tweets.html">Tweets Page</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <article>
+            <!-- Heading Level 1 (Original Content) -->
+            <h1>Introduction to HTML Structure</h1>
+
+            <!-- First Paragraph (Original Content) -->
+            <p>
+                The HTML document object model (DOM) forms the core structure of any webpage. It starts with the mandatory 
+                `<!DOCTYPE html>` declaration, which tells the browser which version of HTML to expect. Following this, the 
+                `<html>` element wraps all content and usually specifies the document's language using the `lang` attribute.
+            </p>
+
+            <!-- Heading Level 2 (Original Content) -->
+            <h2>The Importance of Head and Body</h2>
+
+            <!-- Second Paragraph (Original Content) -->
+            <p>
+                The document is logically divided into two main parts: the `<head>` and the `<body>`. The `<head>` contains 
+                metadata—information about the document, such as its title, character set (`<meta charset="UTF-8">`), and 
+                links to external stylesheets or scripts. This content is generally not visible to the user but is vital 
+                for browser function and search engine optimization.
+            </p>
+
+            <!-- Third Paragraph (Original Content) -->
+            <p>
+                In contrast, the `<body>` contains all the elements that are visually rendered to the user. This includes text, 
+                links, images, multimedia, and interactive forms. Proper structuring of the body content is crucial for both 
+                readability and accessibility, ensuring a smooth experience for all visitors.
+            </p>
+
+            <!-- Heading Level 3 (Original Content) -->
+            <h3>Hierarchical Headings and Content Flow</h3>
+
+            <!-- Fourth Paragraph (Original Content) -->
+            <p>
+                Headings, ranging from `<h1>` (the main topic) down to `<h6>`, establish a clear hierarchy for the document. 
+                It is considered best practice to only use a single `<h1>` tag per page to represent the primary theme. 
+                Lower-level headings (`<h2>`, `<h3>`, etc.) should be used to organize sub-sections logically, much like 
+                chapters and subchapters in a book. This structure greatly aids assistive technologies and content parsers.
+            </p>
+
+            <!-- Clickable Image (Original Content) -->
+            <p>
+                Below is an example of an image that is also a clickable link, demonstrating the use of both the `<a>` and `<img>` tags.
+            </p>
+            <a href="https://www.alxafrica.com/" target="_blank">
+                <img src="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" 
+                     alt="ALX Africa Logo"
+                     onerror="this.onerror=null; this.src='https://placehold.co/300x150/000000/FFFFFF?text=Logo+Unavailable';"
+                     title="Click to visit ALX Africa">
+            </a>
+
+            <!-- Table of Learners (from Step 4, kept for completeness) -->
+            <h2>Learner Information Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>25</td>
+                        <td>USA</td>
+                    </tr>
+                    <tr>
+                        <td>Emily</td>
+                        <td>28</td>
+                        <td>Canada</td>
+                    </tr>
+                    <tr>
+                        <td>Michael</td>
+                        <td>32</td>
+                        <td>Australia</td>
+                    </tr>
+                    <tr>
+                        <td>Sophia</td>
+                        <td>21</td>
+                        <td>UK</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <aside>
+            <p>placeholder to add comment thread later</p>
+        </aside>
+    </main>
+
+    <footer>
+<p>Made by Gemini - <a href="https://www.google.com" target="_blank">here</a>.</p>
+    </footer>
+
+</body>
+</html>
