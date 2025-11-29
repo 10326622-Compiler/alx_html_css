@@ -35,11 +35,7 @@ nav {
     margin: 0 auto;
     padding: 0 40px;
 }
-/* 
-nav img {
-    width: 170px;
-    height: auto;
-} */
+
 
 nav ul {
     display: flex;
@@ -118,6 +114,7 @@ main section:first-child h2 {
     margin-bottom: 80px;
 }
 
+
 main section:first-child h2::first-line {
     color: #C271FF;
 }
@@ -152,4 +149,372 @@ main section:first-child > div:last-child p {
     font-size: 16px;
     font-style: italic;
     color: rgba(255, 255, 255, 0.8);
+}
+main section:nth-child(2) {
+    background: linear-gradient(180deg, #C271FF, #9F5FFF);
+    padding: 80px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+main section:nth-child(2) > div:first-child img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main section:nth-child(2) > div:last-child {
+    max-width: 600px;
+    color: white;
+}
+
+main section:nth-child(2) blockquote {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+main section:nth-child(2) h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+main section:nth-child(2) p {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+main section:nth-child(3) {
+    background: white;
+    padding: 80px 40px;
+}
+
+main section:nth-child(3) h2 {
+    font-size: 32px;
+    color: #071629;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+main section:nth-child(3) > div {
+    display: flex;
+    gap: 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main section:nth-child(3) > div > div {
+    flex: 1;
+}
+
+main section:nth-child(3) > div > div > img:first-child {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+main section:nth-child(3) h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #071629;
+    margin-bottom: 10px;
+}
+
+main section:nth-child(3) > div > div > p:first-of-type {
+    font-size: 14px;
+    color: rgba(7, 22, 41, 0.5);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+main section:nth-child(3) > div > div > div:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+main section:nth-child(3) > div > div > div:nth-of-type(1) img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+main section:nth-child(3) > div > div > div:nth-of-type(1) h4 {
+    font-size: 14px;
+    color: #C271FF;
+    font-weight: 600;
+    position: relative;
+    top: 12rem;
+}
+
+main section:nth-child(3) > div > div > div:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+main section:nth-child(3) > div > div > div:nth-of-type(2) i {
+    color: #C271FF;
+    font-size: 14px;
+}
+
+main section:nth-child(3) > div > div > p:last-child {
+    font-size: 14px;
+    color: #C271FF;
+    font-weight: 600;
+}
+/* --- 1. Main Container Setup --- */
+section.red {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif; /* Or your specific font */
+    
+    /* Create the 4-column Grid */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; /* Space between cards */
+}
+
+/* Make the H2 span the full width of the top */
+section.red h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* --- 2. The Card Layout --- */
+/* We target the direct divs inside the section */
+section.red > div {
+    display: grid;
+    /* This internal grid organizes the content inside the card */
+    grid-template-areas: 
+        "image image"
+        "title title"
+        "desc desc"
+        "author author"
+        "stars time";
+    grid-template-columns: 1fr auto; /* Left side fills space, right side (time) takes what it needs */
+    gap: 10px;
+}
+
+/* --- 3. Content Placement & Styling --- */
+
+/* Main Thumbnail Image */
+section.red > div > img:first-child {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Description Text */
+section.red > div > p:nth-of-type(1) {
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.4;
+    margin: 0;
+
+}
+
+/* Author Avatar */
+section.red > div > div:nth-of-type(1) img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Make it a circle */
+}
+
+/* Author Name */
+section.red > div > div:nth-of-type(1) h4 {
+    color: #a855f7; /* Purple color from screenshot */
+    font-size: 0.85rem;
+    margin: 0 0px 0 -53px;
+    position: relative;
+    top: 11rem;
+}
+
+/* --- 5. Stars Section (The second div inside the card) --- */
+section.red > div > div:nth-of-type(2) {
+    grid-area: stars;
+    display: flex; /* Make stars sit in a horizontal row */
+    gap: 2px;
+    color: #a855f7; /* Purple stars */
+    font-size: 0.8rem;
+    align-self: center;
+    position: relative;
+    top: 10rem;
+    right: 4rem;
+}
+
+/* --- 6. Time/Duration (The last p tag) --- */
+section.red > div > p:last-child {
+    grid-area: time;
+    justify-self: end; /* Push to the right */
+    color: #a855f7; /* Purple text */
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin: 0;
+    align-self: center;
+    position: relative;
+    top: 10rem;
+    right: 3rem;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+   
+.vee{
+     position: relative;
+    top: -4rem;
+    left: 5vw;   
+}
+
+
+main section:nth-child(4) {
+    background: #071629;
+    padding: 80px 40px;
+    text-align: center;
+    color: white;
+}
+
+main section:nth-child(4) h2 {
+    font-size: 32px;
+    margin-bottom: 80px;
+}
+
+main section:nth-child(4) > div:not(:last-child) {
+    display: inline-block;
+    width: 200px;
+    margin: 0 40px;
+    vertical-align: top;
+}
+
+main section:nth-child(4) > div img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+main section:nth-child(4) > div h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+main section:nth-child(4) > div p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+main section:nth-child(4) button {
+    background: linear-gradient(90deg, #C271FF, #FF79C9);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 60px;
+    box-shadow: 0 5px 15px rgba(194, 113, 255, 0.4);
+}
+
+
+main section:nth-child(5) {
+    background: white;
+    padding: 80px 40px;
+}
+
+main section:nth-child(5) h2 {
+    font-size: 60px;
+    color: #071629;
+    text-align: center;
+    margin-bottom: 80px;
+    font-weight: 300;
+}
+
+main section:nth-child(5) > div {
+    display: flex;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main section:nth-child(5) > div > div {
+    flex: 1;
+}
+
+main section:nth-child(5) > div > div > div:nth-child(odd) {
+    margin-bottom: 60px;
+}
+
+main section:nth-child(5) > div > div > div:nth-child(odd) h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #071629;
+    margin-bottom: 20px;
+}
+
+main section:nth-child(5) > div > div > div:nth-child(even) {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(7, 22, 41, 0.5);
+    margin-bottom: 60px;
+}
+
+footer {
+    background: #071629;
+    padding: 40px;
+}
+
+footer section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer section > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+footer section > div:first-child img {
+    width: 170px;
+    height: auto;
+}
+
+footer section > div:first-child > div {
+    display: flex;
+    gap: 20px;
+}
+
+footer section > div:first-child i {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+footer section > p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
 }
